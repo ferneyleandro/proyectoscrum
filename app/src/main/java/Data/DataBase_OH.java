@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DataBase_OH extends SQLiteOpenHelper {
 
-    private static final int version=4;
+    private static final int version=5;
     private static final String name="scrumapp.db";
     private String tabla1;
     private String tabla2;

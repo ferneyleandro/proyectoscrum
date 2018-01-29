@@ -14,8 +14,8 @@ import Data.DataBase_OH;
 import Data.Rol;
 
 public class Crear_rol extends AppCompatActivity implements View.OnClickListener {
-
     DataBase_OH helper = new DataBase_OH(this);
+
     EditText txt_new_rol;
     Switch swicht_active_rol;
     Button btn_new_rol;
@@ -44,7 +44,6 @@ public class Crear_rol extends AppCompatActivity implements View.OnClickListener
             //int id_usurio = Integer.parseInt(getIntent().getExtras().getString("id_usr"));
 
             Rol u = new Rol(name_rol, active);
-
             u.nuevoRegistro(helper.getWritableDatabase());
 
             Intent intent = new Intent(this, Rol.class);

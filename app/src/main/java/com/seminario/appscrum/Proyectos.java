@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -32,6 +33,9 @@ public class Proyectos extends AppCompatActivity implements View.OnClickListener
     ArrayAdapter<String> listaP;
     Cursor resultado;
     int cont = 0;
+    TextView proyectosv;
+    TextView miembrosv;
+    TextView rolv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +70,39 @@ public class Proyectos extends AppCompatActivity implements View.OnClickListener
 
         crear_proyc = (Button) findViewById(R.id.crear_proyc);
         crear_proyc.setOnClickListener(this);
+
+        proyectosv = (TextView)findViewById(R.id.proyectosv);
+        proyectosv.setOnClickListener(this);
+
+        miembrosv = (TextView)findViewById(R.id.miembrosv);
+        miembrosv.setOnClickListener(this);
+
+        rolv = (TextView)findViewById(R.id.rolv);
+        rolv.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         if(view.equals(crear_proyc)){
             Intent intent = new Intent(this, Crear_proyecto.class);
+            intent.putExtra("id_usr", getIntent().getExtras().getString("id_usr"));
+            startActivity(intent);
+        }
+
+        if(view.equals(proyectosv)){
+            Intent intent = new Intent(this, Proyectos.class);
+            intent.putExtra("id_usr", getIntent().getExtras().getString("id_usr"));
+            startActivity(intent);
+        }
+
+        if(view.equals(miembrosv)){
+            Intent intent = new Intent(this, Crear_miembro.class);
+            intent.putExtra("id_usr", getIntent().getExtras().getString("id_usr"));
+            startActivity(intent);
+        }
+
+        if(view.equals(rolv)){
+            Intent intent = new Intent(this, Roles.class);
             intent.putExtra("id_usr", getIntent().getExtras().getString("id_usr"));
             startActivity(intent);
         }

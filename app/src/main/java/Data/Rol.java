@@ -64,6 +64,12 @@ public class Rol implements Entidad {
         );
     }
 
+    public  Cursor listarRol(SQLiteDatabase db){
+        return db.rawQuery("SELECT * FROM "
+            +Scrumcontract.RolEntry.TABLE_NAME, null
+        );
+    }
+
     @Override
     public Cursor listarRegistro(SQLiteDatabase db, int id) {
 
