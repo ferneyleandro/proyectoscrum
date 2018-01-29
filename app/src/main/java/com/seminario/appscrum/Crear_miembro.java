@@ -57,7 +57,7 @@ public class Crear_miembro extends AppCompatActivity implements OnClickListener 
             ls_roles.add(resultado.getString(1));
             cont++;
         }
-        
+
 
         combo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ls_roles);
         combo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -79,7 +79,7 @@ public class Crear_miembro extends AppCompatActivity implements OnClickListener 
             Miembros u = new Miembros(name_miembro, 1);
             u.nuevoRegistro(helper.getWritableDatabase());
 
-            Intent intent = new Intent(this, Proyectos.class);
+            Intent intent = new Intent(this, Miembros.class);
             startActivity(intent);
         }
 
