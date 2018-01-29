@@ -15,7 +15,11 @@
             android:id="@+id/btn_crear_rol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:text="Crear" />
+=======
+            android:text="Nuevo Rol" />
+>>>>>>> ee2fb0faf66e94cf10be0c8ab5d1583e1fb8e023
 
         <ListView
             android:id="@+id/listv_rol"
