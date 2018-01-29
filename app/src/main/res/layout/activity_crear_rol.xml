@@ -4,39 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.seminario.appscrum.Crear_miembro">
+    tools:context="com.seminario.appscrum.Crear_rol">
 
     <LinearLayout
+        android:id="@+id/ly_rol"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/txt_name_miembro"
+            android:id="@+id/txt_new_rol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Nombre"
-            tools:layout_editor_absoluteX="74dp"
-            tools:layout_editor_absoluteY="71dp" />
+            android:text="Escriba el rol" />
 
-        <Spinner
-            android:id="@+id/spinner_rol"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btn_new_miembro"
+        <Switch
+            android:id="@+id/swich_active_rol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Crear nuevo miembro" />
+            android:text="Activar Rol" />
 
         <Button
-            android:id="@+id/btn_return_miembro"
+            android:id="@+id/btn_new_rol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Volver" />
+            android:text="Crear Nuevo Rol"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="43dp" />
+
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver a litado de roles" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

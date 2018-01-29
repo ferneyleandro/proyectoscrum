@@ -102,7 +102,6 @@ public class Crear_proyecto extends AppCompatActivity implements View.OnClickLis
             u.nuevoRegistro(helper.getWritableDatabase());
 
             Intent intent = new Intent(this, Proyectos.class);
-            intent.putExtra("id_usr", getIntent().getExtras().getString("id_usr"));
             startActivity(intent);
         }
     }
