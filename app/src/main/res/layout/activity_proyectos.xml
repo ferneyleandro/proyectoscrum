@@ -9,32 +9,80 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/crear_proyc"
-            android:layout_width="170dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@android:color/holo_red_dark"
-            android:drawableLeft="@android:drawable/ic_menu_add"
-            android:gravity="center_vertical|center_horizontal|center"
-            android:text="Crear Proyecto"
-            android:textColor="@android:color/background_light" />
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="20dp">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Mis proyectos"
-            android:textAlignment="center"
-            android:textColor="@android:color/background_dark"
-            android:textSize="20dp" />
+            <TextView
+                android:id="@+id/proyectosv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Proyectos"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18dp" />
 
-        <ListView
-            android:id="@+id/lista_proy"
+            <TextView
+                android:id="@+id/miembrosv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Miembros"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/rolv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rol"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/crear_proyc"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_red_dark"
+                android:drawableLeft="@android:drawable/ic_menu_add"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:text="Crear Proyecto"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Mis proyectos"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20dp" />
+
+            <ListView
+                android:id="@+id/lista_proy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
